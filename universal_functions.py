@@ -6,6 +6,8 @@ import pandas as pd
 import json
 import pickle
 
+##################### VARIABLES #####################################################
+partisanships = ['FarLeft', 'Left', 'CenterLeft', 'Center', 'CenterRight', 'Right', 'FarRight']
 
 ################ IMPORT FUNCTIONS ######################################
 def manage_overflow():
@@ -93,3 +95,17 @@ def export_as_pkl(export_name:str, content):
         pickle.dump(content, f)
         f.close()
 
+###### ANALYTICS ##########################################
+def get_partisanship_date_from_urlfile(filename:str)->tuple:
+    conversion = {'CE19':'Center',
+                  "CL19": 'CenterLeft',
+                  'CO':'FarRight',
+                  'CR19':'CenterRight',
+                  'FR':'FarRight',
+                  'HL':'FarLeft',
+                  'HR':'FarRight',
+                  'LL19':"Left",
+                  'RR19':'Right'}
+    part = filename.split('urls\\')[1].split('_urls')[0]
+    date = filename.split('_urls_')[1].split('.json')[0]
+    return conversion[part], date

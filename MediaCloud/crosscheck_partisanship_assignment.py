@@ -2,19 +2,7 @@ from MediaCloud.input.lit_reviewed_sources import sources, accepted_translations
 import universal_functions as uf
 import pandas as pd
 
-def get_partisanship_date(filename:str)->tuple:
-    conversion = {'CE19':'Center',
-                  "CL19": 'CenterLeft',
-                  'CO':'FarRight',
-                  'CR19':'CenterRight',
-                  'FR':'FarRight',
-                  'HL':'FarLeft',
-                  'HR':'FarRight',
-                  'LL19':"Left",
-                  'RR19':'Right'}
-    part = filename.split('urls\\')[1].split('_urls')[0]
-    date = filename.split('_urls_')[1].split('.json')[0]
-    return conversion[part], date
+
 
 def get_unique_papers(filename):
     data = uf.import_json(filename)['content']
@@ -50,7 +38,7 @@ def export_results():
     url_files = uf.get_files_from_folder(path, 'json')
     results = []
     for file in url_files:
-        p, date = get_partisanship_date(file)
+        p, date = uf.get_partisanship_date_from_urlfile(file)
         unique_papers = get_unique_papers(file)
         if p in accepted_translations.keys():
             accepted_lit = accepted_translations[p]
@@ -73,8 +61,8 @@ def export_results():
 
 # REVIEW results
 df = pd.read_csv('output/cross_check_results.csv')
-partisanships = ['FarLeft', 'Left', 'CenterLeft', 'Center', 'CenterRight', 'Right', 'FarRight']
-for p in partisanships:
+
+for p in uf.partisanships:
     sub_df = df.loc[df['partisanship']==p]
     print('')
 print('')
