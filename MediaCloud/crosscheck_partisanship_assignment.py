@@ -21,7 +21,6 @@ def count_accepted_paper_overlap(valid_lit:str, unique_newspapers:list)->int:
     return count
 
 def count_nonaccepted_paper_overlap(valid_lit:str, unique_newspapers:list):
-
     cleaned_sources = {k:sources[k] for k in sources.keys() if valid_lit!=k}
     results = {}
     for k in cleaned_sources.keys():

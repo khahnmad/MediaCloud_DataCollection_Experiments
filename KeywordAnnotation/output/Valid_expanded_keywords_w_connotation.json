@@ -1,0 +1,16 @@
+{"Immigration": {
+  "positive": ["citizenship", "migrant", "undocumented", "migration", "immigration", "foreign workers", "refugees", "immigrant", "migrants", "sanctuary cities", "green card", "visa holders", "dream act", "guest workers", "undocumented workers", "citizenship rights", "birthright citizenship", "migration patterns", "immigrant communities", "migration flows", "immigrant integration", "nation of immigrants"],
+  "negative": ["border wall", "illegal aliens", "illegal entry", "refugee", "deport", "anti-immigration", "open border", "illegal immigrants", "xenophobic", "illegals", "visa waiver", "border walls", "border surge", "asylum seekers", "deportation", "border patrol", "asylum process", "border control", "immigration policy", "border enforcement", "immigration reform", "temporary protected status", "immigration laws", "immigration debate", "border crisis", "border barriers", "immigration enforcement", "migration policy"],
+  "neutral": ["visas", "visa", "immigrants", "undocumented immigrant", "legal status", "naturalization", "family reunification", "border management"]},
+  "Islamophobia": {
+    "positive": ["hijabi"],
+    "negative": ["sharia", "jihad", "hijabs", "muslims", "hijab", "jihadi", "muslim", "anti-muslim", "islamic fundamentalists", "islam", "islamophobia", "radical islam", "islamophobic", "islamic extremism", "anti-islam", "sunni", "shia", "sunnis", "jihadists", "koran", "islamists", "burqa", "jihadism", "jihadist", "islamization", "hijabophobia", "mosque attacks"],
+    "neutral": ["qur'an"]},
+  "Anti-semitism": {
+    "positive": [],
+    "negative": ["anti-semitism", "anti-semitic", "gas chamber", "antisemitic", "judaism", "judeo", "extermination camps"],
+    "neutral": ["jewish", "jews", "jew", "synagogue", "non-jewish", "orthodox jews", "jewishness", "pro-jewish"]},
+  "Transphobia": {
+    "positive": ["transgender", "gender transition", "non-binary", "trans community", "gender-affirming", "gender nonconforming", "genderqueer identity", "transgender equality", "transgender issues", "transgender activism"],
+    "negative": ["biological woman", "pronoun", "transphobic", "anti-trans", "biological males", "transphobia", "bathroom bill", "transsexuals"],
+    "neutral": ["genderqueer", "gender identity", "gender expression", "gender dysphoria", "trans individuals", "misgendering", "deadnaming", "gender-affirming care", "gender-affirming surgery", "medical transition", "transgender discrimination"]}}
